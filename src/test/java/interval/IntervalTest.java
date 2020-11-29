@@ -115,4 +115,11 @@ public class IntervalTest {
 	  assertTrue(intervel1.isIntersected(intervel2));;
   }
   
+  @org.junit.Test
+  public void IntersectionBitweenMinAndMaxTest() {
+	  Interval intervel1 = new IntervalBuilder().open(4).open(6).build();
+	  Interval intervel2 = new IntervalBuilder().closed(1).closed(8).build();
+	  assertFalse(intervel1.isIntersected(intervel2));;
+  }
+  
 }
