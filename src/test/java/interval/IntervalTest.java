@@ -81,9 +81,9 @@ public class IntervalTest {
   }
 
   @org.junit.Test
-  public void isRigthIntersectedTest() {
+  public void isMaxPointIntoIntersectedTest() {
 	  Interval intervel1 = new IntervalBuilder().open(1).open(5).build();
-	  Interval intervel2 = new IntervalBuilder().closed(2).closed(8).build();
+	  Interval intervel2 = new IntervalBuilder().closed(0).closed(4).build();
 	  assertTrue(intervel1.isIntersected(intervel2));;
   }
   
