@@ -100,4 +100,12 @@ public class IntervalTest {
 	  Interval intervel2 = new IntervalBuilder().closed(6).closed(7).build();
 	  assertFalse(intervel1.isIntersected(intervel2));;
   }
+  
+  @org.junit.Test
+  public void maxPointOutOfMinPointIntersectionTest() {
+	  Interval intervel1 = new IntervalBuilder().open(5).open(7).build();
+	  Interval intervel2 = new IntervalBuilder().closed(1).closed(4).build();
+	  assertFalse(intervel1.isIntersected(intervel2));;
+  }
+  
 }
