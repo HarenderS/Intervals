@@ -1,6 +1,5 @@
 package interval;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -68,10 +67,17 @@ public class IntervalTest {
   }
   
   @org.junit.Test
-  public void isLeftIntersected() {
+  public void isLeftIntersectedTest() {
 	  Interval intervel1 = new IntervalBuilder().open(1).open(5).build();
 	  Interval intervel2 = new IntervalBuilder().closed(2).closed(8).build();
 	  assertTrue(intervel1.isIntersected(intervel2));;
+  }
+  
+  @org.junit.Test
+  public void isNotLeftIntersectedTest() {
+	  Interval intervel1 = new IntervalBuilder().open(1).open(5).build();
+	  Interval intervel2 = new IntervalBuilder().closed(0).closed(8).build();
+	  assertFalse(intervel1.isIntersected(intervel2));;
   }
 
 }
