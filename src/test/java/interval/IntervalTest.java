@@ -87,4 +87,10 @@ public class IntervalTest {
 	  assertTrue(intervel1.isIntersected(intervel2));;
   }
   
+  @org.junit.Test
+  public void isMaxPointNotIntoIntersectedTest() {
+	  Interval intervel1 = new IntervalBuilder().open(1).open(5).build();
+	  Interval intervel2 = new IntervalBuilder().closed(0).closed(6).build();
+	  assertFalse(intervel1.isIntersected(intervel2));;
+  }
 }
