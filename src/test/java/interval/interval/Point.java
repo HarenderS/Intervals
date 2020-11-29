@@ -1,23 +1,23 @@
-package interval;
+package interval.interval;
 
 public class Point {
 
   static final double DEVIATION = 0.1;
   final double value;
 
-  Point(double value){
+  public Point(double value){
     this.value = value;
   }
 
-  double getLess() {
+  public double getLess() {
     return this.value - Point.DEVIATION;
   }
 
-  double getEquals() {
+  public double getEquals() {
     return this.value;
   }
 
-  double getGreater() {
+  public double getGreater() {
     return this.value + Point.DEVIATION;
   }
   

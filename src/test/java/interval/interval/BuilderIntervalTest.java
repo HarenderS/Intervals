@@ -1,9 +1,16 @@
-package interval;
+package interval.interval;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import interval.Interval.ClosedMax;
+import interval.Interval.ClosedMin;
+import interval.Interval.Interval;
+import interval.Interval.IntervalBuilder;
+import interval.Interval.Max;
+import interval.Interval.Min;
 
 public class BuilderIntervalTest {
 

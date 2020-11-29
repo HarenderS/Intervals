@@ -1,25 +1,14 @@
-package interval;
+package interval.Interval;
 
-public class Max {
-
-  protected double value;
+public class Max extends Point{
 
   public Max(double value) {
-    this.value = value;
-  }
-
-  public boolean isWithin(double value) {
-    return this.value > value;
+    super(value);
   }
 
   @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    long temp;
-    temp = Double.doubleToLongBits(value);
-    result = prime * result + (int) (temp ^ (temp >>> 32));
-    return result;
+  public boolean isWithin(double value) {
+    return this.value > value;
   }
 
   @Override

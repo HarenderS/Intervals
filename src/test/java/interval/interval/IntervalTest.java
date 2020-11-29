@@ -1,10 +1,13 @@
-package interval;
+package interval.interval;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
+
+import interval.Interval.Interval;
+import interval.Interval.IntervalBuilder;
 
 public class IntervalTest {
   

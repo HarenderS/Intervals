@@ -1,8 +1,11 @@
-package interval;
+package interval.interval;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+
+import interval.Interval.ClosedMax;
+import interval.Interval.Max;
 
 public class ClosedMaxTest extends MaxTest {
 

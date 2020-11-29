@@ -1,8 +1,8 @@
-package interval;
+package interval.Interval;
 
-public class ClosedMax extends Max {
+public class ClosedMin extends Min {
 
-  public ClosedMax(double value) {
+  public ClosedMin(double value) {
     super(value);
   }
 
@@ -13,7 +13,7 @@ public class ClosedMax extends Max {
 
   @Override
 	public String toString() {
-		return this.value + "]";
-	}	
-
+		return "[" + this.value;
+  }	
+  
 }

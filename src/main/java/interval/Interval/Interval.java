@@ -1,4 +1,4 @@
-package interval;
+package interval.Interval;
 
 public class Interval {
 

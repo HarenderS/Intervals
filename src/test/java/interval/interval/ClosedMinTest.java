@@ -1,8 +1,11 @@
-package interval;
+package interval.interval;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+
+import interval.Interval.ClosedMin;
+import interval.Interval.Min;
 
 public class ClosedMinTest extends MinTest {
 
