@@ -12,7 +12,7 @@ public class Interval {
 	}
 	
 	public boolean isIntersected(Interval interval) {
-		return this.include(interval.min.value) || this.max.isWithin(interval.max.value);
+		return this.include(interval.min.value) || this.include(interval.max.value);
 	}
 
 	public boolean include(double value) {
