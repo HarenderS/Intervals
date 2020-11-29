@@ -11,7 +11,9 @@ public class Interval {
 		this.max = max;
 	}
 	
-	
+	public boolean isIntersected(Interval interval) {
+		return true;
+	}
 
 	public boolean include(double value) {
 			return this.min.isWithin(value) && this.max.isWithin(value);

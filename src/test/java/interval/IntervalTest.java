@@ -1,9 +1,10 @@
 package interval;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 public class IntervalTest {
@@ -12,7 +13,7 @@ public class IntervalTest {
   private Point right = new Point(4.4);
   private IntervalBuilder intervalBuilder;
 
-  @BeforeEach
+  @Before
   public void before(){
     this.left = new Point(-2.2);
     this.right = new Point(4.4);
@@ -66,10 +67,11 @@ public class IntervalTest {
     assertFalse(interval.include(right.getGreater()));
   }
   
-  @Test
+  @org.junit.Test
   public void isLeftIntersected() {
-	  Interval intervel1 = this.intervalBuilder.closed(left.getEquals()).closed(right.getEquals()).build();
-	  Interval intervel2 = this.intervalBuilder.closed(left.getEquals()).closed(right.getEquals()).build();
+	  Interval intervel1 = new IntervalBuilder().open(1).open(5).build();
+	  Interval intervel2 = new IntervalBuilder().closed(2).closed(8).build();
+	  assertTrue(intervel1.isIntersected(intervel2));;
   }
 
 }
