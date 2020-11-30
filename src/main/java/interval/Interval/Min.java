@@ -1,6 +1,6 @@
 package interval.Interval;
 
-public class Min extends Point {
+public class Min extends IntervalPoint {
 
 	public Min(double value) {
 		super(value);

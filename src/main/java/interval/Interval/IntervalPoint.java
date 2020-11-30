@@ -1,10 +1,10 @@
 package interval.Interval;
 
-public abstract class Point {
+public abstract class IntervalPoint {
 
 	protected double value;
 
-	public Point(double value) {
+	public IntervalPoint(double value) {
 		this.value = value;
 	}
 

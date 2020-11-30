@@ -1,6 +1,6 @@
 package interval.Interval;
 
-public class Max extends Point{
+public class Max extends IntervalPoint{
 
   public Max(double value) {
     super(value);
