@@ -10,14 +10,14 @@ import interval.Interval.Min;
 public class ClosedMinTest extends MinTest {
 
   @Override
-  protected Min createMin() {
+  protected Min create() {
     return new ClosedMin(this.point.getEquals());
   }
 
   @Test
   @Override
-  public void givenMinWhenIsWithinWithEqualsValue(){
-    assertTrue(this.min.isWithin(this.point.getEquals()));
+  public void givenPointWhenIsWithinWithEqualsValue(){
+    assertTrue(this.intervalPoint.isWithin(this.point.getEquals()));
   }
   
 }

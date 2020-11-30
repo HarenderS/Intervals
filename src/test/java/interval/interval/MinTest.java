@@ -6,37 +6,38 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import interval.Interval.IntervalPoint;
 import interval.Interval.Min;
 
-public class MinTest {
-  
-  protected Min min;
-  protected Point point;
+public class MinTest extends CommanPoint{
 
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.min = this.createMin();
+    this.intervalPoint = this.create();
   }
-
-  protected Min createMin() {
-    return new Min(this.point.getEquals());
-  }
-
-  @Test
-  public void givenMinWhenIsWithinWithLessValueThenTrue(){
-    assertFalse(this.min.isWithin(this.point.getLess()));
+  
+  @Override
+  protected IntervalPoint create() {
+	  return new Min(this.point.getEquals());
   }
 
   @Test
-  public void givenMinWhenIsWithinWithEqualsValue(){
-    assertFalse(this.min.isWithin(this.point.getEquals()));
+  @Override
+  public void givenPointWhenIsWithinWithLessValueThenTrue(){
+    assertFalse(this.intervalPoint.isWithin(this.point.getLess()));
   }
 
   @Test
-  public void givenMinWhenIsWithinWithGreaterValueThenTrue(){
-    assertTrue(this.min.isWithin(this.point.getGreater()));
+  @Override
+  public void givenPointWhenIsWithinWithEqualsValue(){
+    assertFalse(this.intervalPoint.isWithin(this.point.getEquals()));
+  }
+
+  @Test
+  @Override
+  public void givenPointWhenIsWithinWithGreaterValueThenTrue(){
+    assertTrue(this.intervalPoint.isWithin(this.point.getGreater()));
   }
  
 }
-

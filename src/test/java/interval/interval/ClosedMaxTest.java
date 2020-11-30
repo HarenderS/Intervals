@@ -10,14 +10,14 @@ import interval.Interval.Max;
 public class ClosedMaxTest extends MaxTest {
 
   @Override
-  protected Max createMax() {
+  protected Max create() {
     return new ClosedMax(this.point.getEquals());
   }
 
   @Test
   @Override
-  public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertTrue(this.max.isWithin(this.point.getEquals()));
+  public void givenPointWhenIsWithinWithEqualsValue(){
+    assertTrue(this.intervalPoint.isWithin(this.point.getEquals()));
   }
   
 }
