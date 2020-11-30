@@ -8,35 +8,36 @@ import org.junit.Test;
 
 import interval.Interval.Max;
 
-public class MaxTest extends CommanPoint{
-  
-  @Before
-  public void before(){
-    this.point = new Point(4.4);
-    this.intervalPoint = this.create();
-  }
+public class MaxTest extends CommonPoint {
 
-  @Override
-  protected Max create() {
-    return new Max(this.point.getEquals());
-  }
+	@Before
+	@Override
+	public void before() {
+		this.point = new Point(4.4);
+		this.intervalPoint = this.create();
+	}
+	
+	@Override
+	protected Max create() {
+		return new Max(this.point.getEquals());
+	}
 
-  @Test
-  @Override
-  public void givenPointWhenIsWithinWithLessValueThenTrue(){
-    assertTrue(this.intervalPoint.isWithin(this.point.getLess()));
-  }
+	@Test
+	@Override
+	public void givenPointWhenIsWithinWithLessValueThenTrue() {
+		assertTrue(this.intervalPoint.isWithin(this.point.getLess()));
+	}
 
-  @Test
-  @Override
-  public void givenPointWhenIsWithinWithEqualsValue(){
-    assertFalse(this.intervalPoint.isWithin(this.point.getEquals()));
-  }
+	@Test
+	@Override
+	public void givenPointWhenIsWithinWithEqualsValue() {
+		assertFalse(this.intervalPoint.isWithin(this.point.getEquals()));
+	}
 
-  @Test
-  @Override
-  public void givenPointWhenIsWithinWithGreaterValueThenTrue(){
-    assertFalse(this.intervalPoint.isWithin(this.point.getGreater()));
-  }
- 
+	@Test
+	@Override
+	public void givenPointWhenIsWithinWithGreaterValueThenTrue() {
+		assertFalse(this.intervalPoint.isWithin(this.point.getGreater()));
+	}
+
 }

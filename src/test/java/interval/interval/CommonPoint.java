@@ -1,10 +1,11 @@
 package interval.interval;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import interval.Interval.IntervalPoint;
 
-public abstract class CommanPoint {
+public abstract class CommonPoint {
 
 	protected IntervalPoint intervalPoint;
 	protected Point point;
@@ -19,4 +20,11 @@ public abstract class CommanPoint {
 
 	@Test
 	public abstract void givenPointWhenIsWithinWithGreaterValueThenTrue();
+
+	@Before
+	public void before() {
+		this.point = new Point(4.4);
+		this.intervalPoint = this.create();
+	}
+
 }
